@@ -1,6 +1,4 @@
 {
   "presets": ["env", "react", "es2017", "stage-0"],
-  "plugins": [
-    "transform-decorators"
-  ]
+  "plugins": [ "transform-decorators-legacy"]
 }

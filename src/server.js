@@ -20,7 +20,7 @@ function renderHTML(componentHTML) {
       <head>
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Hello React</title>
+          <title>Feedback form</title>
           <link rel="stylesheet" href="${assetUrl}/dist/styles.css">
       </head>
       <body>

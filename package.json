@@ -40,9 +40,11 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "cn-decorator": "^2.1.0",
     "jscs": "^3.0.7",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-textarea-autosize": "^5.2.1"
   }
 }

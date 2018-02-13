@@ -1,0 +1,25 @@
+.textarea{
+  /* display:inline-flex; */
+}
+  .textarea{
+    padding:10px;
+    border-bottom: 1px solid rgb(128, 128, 128);
+    transition-duration: 1000ms;
+    transition-property: border-bottom-color, box-shadow, width;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .textarea__inner{
+    width:100%;
+  }
+  .textarea::placeholder{
+    transition: opacity .1s ease-in-out
+  }
+  .textarea:hover{
+    border-bottom: 1px solid rgb(206, 202, 202);
+  }
+  .textarea:focus{
+    border-bottom: 1px solid rgb(206, 202, 202);
+  }
+  .textarea_resize_none .textarea__inner{
+    resize:none;
+  }

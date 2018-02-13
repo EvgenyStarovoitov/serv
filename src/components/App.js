@@ -1,70 +1,33 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 
 import './App.css';
+import './styles.css';
 
-const propTypes = {
-  initialName: PropTypes.string
-};
+import Input from './input/index';
+import Textarea from './textarea/index';
 
-const defaultProps = {
-  initialName: 'Аноним'
-};
-
-class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.handleNameChange = this.handleNameChange.bind(this);
-    this.renderGreetingWidget = this.renderGreetingWidget.bind(this);
-
-    this.state = {
-      name:            this.props.initialName,
-      touched:         false,
-      greetingWidget:  () => null
-    };
-  }
-
-  handleNameChange(val) {
-    const name = val.target.value;
-
-    this.setState({ touched: true });
-
-    if (name.length === 0) {
-      this.setState({ name: this.props.initialName });
-    } else {
-      this.setState({ name });
-    }
-  }
-
-  renderGreetingWidget() {
-    if (!this.state.touched) {
-      return null;
-    }
-
-    return (
-      <div>
-        <hr />
-        <p>Здравствуйте, {this.state.name}!</p>
-      </div>
-    );
+export default class App extends React.Component {
+  state = {
   }
 
   render() {
     return (
       <div className='App'>
-        <h1>Hello World!</h1>
-        <div>
-          <p>Введите Ваше имя:</p>
-          <div><input onChange={this.handleNameChange} /></div>
-          {this.renderGreetingWidget()}
-        </div>
+        <p>Ваше сообщение</p>
+        <Input
+          placeholder='ФИО'
+        />
+        <Input
+          placeholder='Телефон'
+        />
+        <Input
+          placeholder='Email'
+          type='email'
+        />
+        <Textarea
+          minRows={6}
+        />
       </div>
     );
   }
 }
-
-App.propTypes = propTypes;
-App.defaultProps = defaultProps;
-
-export default App;
