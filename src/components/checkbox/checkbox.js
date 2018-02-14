@@ -3,7 +3,8 @@ import Type from 'prop-types';
 
 import cn from '../cn';
 
-import Icon from '../icon/index.js';
+import IconChecked from '../icon/iconChecked/iconChecked.js';
+import IconUnchecked from '../icon/iconUnchecked/iconUnchecked.js';
 
 @cn('checkbox')
 export default class Checkbox extends React.Component {
@@ -27,14 +28,13 @@ export default class Checkbox extends React.Component {
   }
 
   handleChange = () => {
-    console.log(`checked: ${this.state.checked}`);
     const nextValue = !this.state.checked;
 
     this.setState({ checked: nextValue });
-
     if (this.props.onChange) {
       this.props.onChange(this.state.checked);
     }
+    console.log(`checked: ${this.state.checked}`);
   }
 
   render(cn) {
@@ -54,9 +54,7 @@ export default class Checkbox extends React.Component {
         className={cn()}
         htmlFor={this.props.id}
       >
-        <Icon
-          className={cn('icon')}
-        />
+        <span>{!this.state.checked ? <IconUnchecked size='s'/> : <IconChecked size='s'/>   }</span>
         <input {...checkboxProps}/>
         <span
           className={cn('text')}

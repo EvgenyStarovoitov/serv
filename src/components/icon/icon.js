@@ -20,10 +20,10 @@ export default class Icon extends React.Component {
   render(cn) {
     return (
       <span
-        className={cn()}
-      >
-        <span />
-      </span>
+        className={cn({
+          size: this.props.size
+        })}
+      />
     );
   }
 }

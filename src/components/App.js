@@ -23,7 +23,7 @@ export default class App extends React.Component {
         <Checkbox
           checked={false}
           id='anonym'
-          text='Анонимное сообщеине'
+          text='Анонимное сообщение'
           onChange={this.handleChange}
         />
         <Input

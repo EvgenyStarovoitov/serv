@@ -10,9 +10,10 @@
 .checkbox__text{
   padding-left: 20px;
   cursor: pointer;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
 }
 .checkbox__inner{
   cursor: pointer;
-  border: 1px solid grey;
+  position: absolute;
+  /* border: 1px solid grey; */
 }
