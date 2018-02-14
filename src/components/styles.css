@@ -11,7 +11,8 @@ A couple of things to watch out for:
 - By turning off ::-webkit-search-decoration, it removes the extra whitespace on the left on search inputs
 ----------------------------------------------------------------------------------------------------*/
 *{
-  font-family: 'Roboto','Helvetica Neue', 'Open Sans', Arial, sans-serif;
+	font-family: 'Roboto','Helvetica Neue', 'Open Sans', Arial, sans-serif;
+	font-weight: 300;
 }
 
 input,

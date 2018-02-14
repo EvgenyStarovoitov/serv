@@ -37,20 +37,17 @@ export default class Textarea extends React.Component {
   };
 
   handleChange = (event) => {
-    const { value } = event.target;
-
-    this.setState({ value });
-
+    this.setState({ value: event.target.value });
     if (this.props.onChange) {
       this.props.onChange(event);
     }
   }
 
-  handleHeightChange = (height) => {
-    if (this.props.onHeightChange) {
-      this.props.onHeightChange(height);
-    }
-  }
+  // handleHeightChange = (height) => {
+  //   if (this.props.onHeightChange) {
+  //     this.props.onHeightChange(height);
+  //   }
+  // }
 
   renderNativeTextarea = (prop) => {
     return (<textarea {...prop} />);
@@ -63,7 +60,7 @@ export default class Textarea extends React.Component {
         maxRows={this.props.maxRows}
         minRows={this.props.minRows}
         style={{ maxHeight: this.props.maxHeight }}
-        onHeightChange={this.handleHeightChange}
+        // onHeightChange={this.handleHeightChange}
       />
     );
   }

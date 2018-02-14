@@ -5,15 +5,27 @@ import './styles.css';
 
 import Input from './input/index';
 import Textarea from './textarea/index';
+import Checkbox from './checkbox/index';
 
 export default class App extends React.Component {
   state = {
+    anonym: false
+  }
+
+  handleChange = (value) => {
+    console.log(`value: ${value}`);
   }
 
   render() {
     return (
       <div className='App'>
-        <p>Ваше сообщение</p>
+        <h3>Ваше сообщение</h3>
+        <Checkbox
+          checked={false}
+          id='anonym'
+          text='Анонимное сообщеине'
+          onChange={this.handleChange}
+        />
         <Input
           placeholder='ФИО'
         />

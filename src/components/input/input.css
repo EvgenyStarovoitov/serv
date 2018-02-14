@@ -1,20 +1,17 @@
 .input{
-  display: inline-flex;
-}
-  .input__box{
     padding:10px;
     border-bottom: 1px solid grey;
-    transition-duration: 1000ms;
+    transition-duration: 2000ms;
     transition-property: border-bottom-color, box-shadow, width;
     transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  }
+}
   .input__inner {
     width: 100%;
   }
 
-  .input__box:hover{
+  .input:hover{
     border-bottom: 1px solid rgb(206, 202, 202);
   }
-  .input__box:focus{
+  .inpu:box:focus{
     border-bottom: 1px solid rgb(206, 202, 202);
   }

@@ -1,0 +1,18 @@
+.checkbox{
+  padding: 10px;
+  position: relative;
+}
+
+
+
+
+
+.checkbox__text{
+  padding-left: 20px;
+  cursor: pointer;
+  border: 1px solid grey;
+}
+.checkbox__inner{
+  cursor: pointer;
+  border: 1px solid grey;
+}

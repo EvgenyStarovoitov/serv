@@ -51,7 +51,7 @@ export default class Input extends React.Component {
     };
 
     return (
-      <div className={cn('box')}>
+      <div className={cn()}>
         <input {...inputProps}/>
       </div>
     );

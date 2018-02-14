@@ -1,0 +1,7 @@
+.icon {
+  background-image: url('./unchecked.svg');
+}
+
+.icon .icon__checked{
+  background-image: url('./checked.svg');
+}
