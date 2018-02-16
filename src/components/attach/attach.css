@@ -1,0 +1,40 @@
+.attach{
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 4px/4px;
+}
+
+.attach__label,
+.attach__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.attach__label {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.attach__inner {
+    opacity: 0;
+    cursor: pointer;
+
+    /*
+     * Хак для обхода поведения IE10+, где левая половина контрола — «поле ввода»,
+     * в которое можно поставить курсор. Нажатие в такое поле не вызывает click,
+     * а только ставит курсор, который виден независимо от видимости контрола.
+     * Cкейлинг размещает в видимом пространстве кнопки именно кнопку инпута.
+     */
+    width: 100px;
+    height: 50px;
+    transform: scale(20);
+}
+.attach__button{
+  padding-left:15px;
+}

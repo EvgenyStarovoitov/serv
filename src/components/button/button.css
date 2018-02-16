@@ -1,0 +1,47 @@
+.button{
+  display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    outline: 0;
+    text-align: center;
+    white-space: nowrap;
+    transition-duration: 600ms;
+    transition-property: background, border-color, color, width;
+    transition-timing-function: ease;
+    border: 1px solid grey;
+    border-radius: 4px/4px;
+}
+.button:hover{
+  border:1px solid rgb(206, 202, 202);
+}
+.button_width_available {
+  width: 100%;
+}
+
+.button_size_s {
+  height: 30px;
+  padding: 0 15px;
+  line-height: 28px;
+}
+
+.button_size_m {
+  height: 40px;
+  padding: 0 20px;
+  line-height: 38px;
+}
+
+.button_size_l {
+  height: 50px;
+  padding: 0 25px;
+  line-height: 48px;
+}
+
+.butto_size_xl {
+  height: 60px;
+  padding: 0 30px;
+  line-height: 58px;
+}

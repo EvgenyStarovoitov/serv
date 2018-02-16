@@ -1,16 +1,16 @@
 import React from 'react';
 import Icon from '../index';
 
-import './iconChecked.css';
+import './iconAttach.css';
 
-export default class IconChecked extends React.Component {
+export default class IconAttach extends React.Component {
   static propTypes = Icon.propTypes;
   render() {
     return (
       <Icon
         {...this.props}
-        name='iconChecked'
-        className={'checked'}
+        name='iconattach'
+        className={'attached'}
       />
     );
   }

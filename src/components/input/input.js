@@ -29,15 +29,9 @@ export default class Input extends React.Component {
   };
 
   handleChange = (event) => {
-    this.changeValue(event);
-  }
-
-  changeValue(event) {
-    this.setState({ value : event.target.value });
     if (this.props.onChange) {
       this.props.onChange(event);
     }
-    console.log(`value: ${this.state.value}`);
   }
 
   render(cn) {

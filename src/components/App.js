@@ -6,13 +6,19 @@ import './styles.css';
 import Input from './input/index';
 import Textarea from './textarea/index';
 import Checkbox from './checkbox/index';
+import Button from './button/index';
+import Attach from './attach/index';
 
 export default class App extends React.Component {
   state = {
     anonym: false
   }
 
-  handleChange = (value) => {
+  handleChange = (event) => {
+    console.log(`value: ${event.target.value}`);
+  }
+
+  handleValue = (value) => {
     console.log(`value: ${value}`);
   }
 
@@ -24,10 +30,11 @@ export default class App extends React.Component {
           checked={false}
           id='anonym'
           text='Анонимное сообщение'
-          onChange={this.handleChange}
+          onChange={this.handleValue}
         />
         <Input
           placeholder='ФИО'
+          onChange={this.handleChange}
         />
         <Input
           placeholder='Телефон'
@@ -38,6 +45,15 @@ export default class App extends React.Component {
         />
         <Textarea
           minRows={6}
+        />
+        <Attach
+          id='attach_button'
+          text='Выберите файл'
+        />
+        <Button
+          size='m'
+          width='available'
+          text='Отправить'
         />
       </div>
     );

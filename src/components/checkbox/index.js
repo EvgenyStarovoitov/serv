@@ -1,3 +1,3 @@
 import './checkbox.css';
 
-export default from './checkbox';
+export default from './checkbox.js';
